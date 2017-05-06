@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-6 ff">
+            <div class="container">
+                {{#each burgerList}}
+                <div class="row text-center">
+                    <div>
+                        <div class="col-md-4 text-center">
+                            <div id="panel-{{ID}}" class="panel panel-default">
+                                <div class="panel-body">
+                                    {{ID}}: <span id="burger-id-{{ID}}" </span> {{BURGER_NAME}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-center "><button type="button" class="btn btn-primary" onclick="devourBurger({{ID}})"> Devour </button></div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <div class="container">
+                {{#each devouredBurgerList}}
+                <div class="row text-center">
+                    <div class="col-md-4 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                {{ID}}:{{BURGER_NAME}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
